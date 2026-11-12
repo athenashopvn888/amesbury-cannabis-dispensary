@@ -62,3 +62,9 @@ State: `LIVE WITH SOD HOLD`
 - Removed the duplicate flower-tier block from the homepage; tier pages remain available from the menu and campaign links.
 - Corrected the empty SKU 1010 customer label to `PLAYERFARE` from the owner-provided count sheet.
 - Added a mobile regression test. At 390×844: no horizontal overflow, full product image containment, full-width category control and compact cards verified.
+
+## TV board parity repair — 2026-11-12
+
+- Rebuilt `/tv` from a scrolling web-card grid into a fixed 16:9 in-store flower board modeled on ADC's operating layout: branded header, tier ribbon, image-led tier panels, compact THC and price tables, address footer and all 52 flower SKUs visible on one screen.
+- Rebuilt `/tv2` as an image-led three-panel board with every non-flower category represented. All 104 items rotate through four fixed-height pages every 15 seconds.
+- Both boards use the shared published catalog, fit a 1280×720 viewport without horizontal or vertical overflow, and retain truthful staff-facing availability wording.
