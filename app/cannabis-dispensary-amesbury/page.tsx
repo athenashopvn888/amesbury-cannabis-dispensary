@@ -1,0 +1,6 @@
+import Link from "next/link";
+import SiteChrome from "../components/SiteChrome";
+import { STORE } from "../lib/store";
+
+export const metadata = { title: "Cannabis Dispensary in Amesbury", description: "A local guide to Amesbury Cannabis Dispensary on Lawrence Avenue West in North York." };
+export default function AmesburyGuide() { return <SiteChrome><main><section className="pageHero local"><p className="kicker">LOCAL STORE GUIDE</p><h1>Cannabis dispensary in Amesbury</h1><p>{STORE.name} is located at {STORE.street} in North York. This guide keeps the focus on the exact storefront, current map listing and honest menu status.</p></section><section className="plainContent prose"><h2>Planning a visit on Lawrence Avenue West</h2><p>Use the supplied Google Maps listing for current routing. The storefront image on this website shows the green-and-gold signage and the number 1575, helping you recognize the entrance after you arrive.</p><h2>Browse without made-up availability</h2><p>The collection routes are prepared for the store’s governed inventory source. Until that connection is approved, each page states that live products and prices are unavailable.</p><div className="actions"><a href={STORE.maps}>Open Google Maps</a><Link className="outline dark" href="/menu">Explore menu structure</Link></div></section></main></SiteChrome>; }
