@@ -26,7 +26,7 @@
 - Master Lines mapping: `HELD` — the main line is known, but no Amesbury routing assignment was supplied.
 - Telnyx voice connection: `HELD` — no assignment supplied.
 - Telnyx messaging profile: `HELD` — no assignment supplied.
-- Analytics/GTM/GSC identifiers: `IN PROGRESS` — GSC domain registration and sitemap submission are part of this release.
+- Analytics/GTM/GSC identifiers: `CONFIRMED` — canonical URL-prefix property verified in GSC; sitemap submitted successfully.
 - Command Center registry/profile/ledger targets: `HELD` — ledger entry is prepared in `report/LAUNCH_REPORT.md`; registry code is missing.
 
 ## Brand and content
@@ -50,7 +50,7 @@
 - [ ] Master Lines and Telnyx held by missing approved routing assignments.
 - [x] SEO metadata, schema, robots, sitemap and canonicals implemented without held facts.
 - [x] Canonical domain DNS is connected to Vercel.
-- [ ] Anonymous canonical-domain production read-back must be repeated after the final release.
+- [x] Anonymous canonical-domain production read-back passes after the final release.
 - [ ] Command Center registry update held by missing owner-approved StoreCode.
 
 ## Placeholder manifest
@@ -64,7 +64,7 @@
 
 ## Final state
 
-- State: `RELEASE CANDIDATE`
+- State: `LIVE WITH OPERATIONAL HOLD`
 - Required holds: unique Amesbury StoreCode, public hours, SOD POD, and Master Lines/Telnyx assignments.
 - Conditional holds: redirect domains.
 - Owner next action: assign the unique Amesbury StoreCode so the prepared SOD chat can be activated without colliding with Agincourt.

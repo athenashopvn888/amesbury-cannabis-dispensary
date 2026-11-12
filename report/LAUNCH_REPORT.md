@@ -1,7 +1,7 @@
 # Amesbury Cannabis Dispensary launch report
 
 Date: 2026-11-12 (Asia/Bangkok)  
-State: `RELEASE CANDIDATE`
+State: `LIVE WITH SOD HOLD`
 
 ## DONE
 
@@ -37,13 +37,17 @@ State: `RELEASE CANDIDATE`
 | FAQ/policies | `/faq`, `/policies` | DONE |
 | TV boards | `/tv`, `/tv2` | DONE |
 | Product detail/category pages | `/products/[sku]`, `/items/[category]` | DONE |
-| Search Console | domain property + `/sitemap.xml` | IN PROGRESS |
+| Search Console | canonical URL-prefix property + `/sitemap.xml` | DONE, verified; 181 URLs discovered |
 
 ## Release evidence
 
 - Repository: `https://github.com/athenashopvn888/amesbury-cannabis-dispensary`.
 - Release branch: `codex/amesbury-full-launch-20261112`.
+- Pull requests: `#2` full site release and `#3` Search Console verification.
 - Vercel project: `trungndesign99s-projects/amesbury-cannabis-dispensary`.
+- Final production deployment: `dpl_G9Ppwtg65Fzmwfbm83ipBfbgMey3` (`READY`).
 - Canonical domain: `amesburycannabisdispensary.com` is attached to Vercel and the Namecheap apex/www records have been replaced with Vercel records.
+- Canonical checks: apex, full menu, Easy View, delivery, TV, TV2, product detail, sitemap and verification file return HTTP 200; `www` returns HTTP 308 to the apex.
+- Google Search Console: ownership verified using the live HTML file; `/sitemap.xml` submitted with `Success` and 181 discovered pages on 2026-11-12.
 - QA: seven contract tests pass; lint passes; Next.js 16.4.6 production build generates 187 routes; production dependency audit reports zero vulnerabilities; browser checks cover home, Easy View, delivery and full-screen TV behavior.
 - Remaining placeholders: none in declared visual slots. Operational surfaces use explicit unavailable states, not visual placeholders.
