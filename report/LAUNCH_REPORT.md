@@ -1,7 +1,7 @@
 # Amesbury Cannabis Dispensary launch report
 
 Date: 2026-11-12 (Asia/Bangkok)  
-State: `PROPOSED`
+State: `DEPLOYED`
 
 ## DONE
 
@@ -20,8 +20,8 @@ State: `PROPOSED`
 - Menu/on-hand: exact Amesbury feed/store code and current inventory authority missing.
 - Phone/hours: no owner-approved main phone, delivery phone or GBP-derived hours supplied.
 - SOD/POD, Master Lines and Telnyx: dependent on the missing StoreCode and phone assignments.
-- GitHub/Vercel/DNS: exact repository/project/team/access target not supplied or discovered in the named workspace.
-- Production verification: cannot be marked deployed or live until the above hosting target is resolved.
+- Canonical DNS/TLS: Vercel owns and verified the domain assignment, but Namecheap still serves parked records. Required registrar changes: replace apex parking with Vercel `A @ 216.198.79.1` and `A @ 64.29.17.1`; replace the `www` parking CNAME with `CNAME www 7f83bdeb5667a557.vercel-dns-017.com`.
+- Canonical-domain production verification: blocked until those DNS records propagate.
 
 ## Route matrix
 
@@ -40,8 +40,10 @@ State: `PROPOSED`
 
 ## Release evidence
 
-- Repository: local project `Amesbury Cannabis Dispensary Website`; remote held.
-- Branch/commit/PR: pending repository creation or target confirmation.
-- Vercel project/deployment: held.
-- Canonical domain: `amesburycannabisdispensary.com` (configured in code; not yet live-verified).
+- Repository: `https://github.com/athenashopvn888/amesbury-cannabis-dispensary`.
+- Branch: `codex/amesbury-new-location-20261112`; implementation commit `2a186b1`; PR `#1`.
+- Vercel project: `trungndesign99s-projects/amesbury-cannabis-dispensary`.
+- Production deployment: `dpl_HLs496D8Xq4CKEHDms3NV6GpmeoU`; READY at `https://amesbury-cannabis-dispensary.vercel.app`.
+- Canonical domain: `amesburycannabisdispensary.com` is attached and ownership-verified in Vercel, but DNS still points to Namecheap parking and is not live.
+- QA: six contract tests pass; lint passes; Next.js 16.4.6 production build passes; production dependency audit reports zero vulnerabilities; 1440×900 and 390×844 browser checks show no horizontal overflow or console errors.
 - Remaining placeholders: none in declared visual slots. Operational surfaces use explicit unavailable states, not visual placeholders.

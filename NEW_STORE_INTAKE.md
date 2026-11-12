@@ -15,11 +15,11 @@
 
 ## Systems
 
-- GitHub repository and remote default branch: `HELD` — local project prepared; exact owner repo not supplied.
-- Vercel team/project: `HELD` — not supplied.
+- GitHub repository and remote default branch: `CONFIRMED` — `athenashopvn888/amesbury-cannabis-dispensary`, `main`.
+- Vercel team/project: `CONFIRMED` — `trungndesign99s-projects/amesbury-cannabis-dispensary`.
 - Canonical domain: `CONFIRMED` — amesburycannabisdispensary.com.
 - Redirect domains: `HELD` — none supplied.
-- DNS registrar/access state: `HELD` — not supplied.
+- DNS registrar/access state: `HELD` — third-party Namecheap DNS is still parked; no registrar credentials or API access are available in this workspace.
 - Menu source and exact store/feed code: `HELD` — every inventory surface fails closed.
 - On-hand/availability authority: `HELD` — no sample inventory published.
 - Approved SOD POD and delivery configuration source: `HELD` — no POD assignment inferred.
@@ -49,8 +49,8 @@
 - [ ] SOD delivery workflow held by missing code, POD and contact configuration.
 - [ ] Master Lines and Telnyx held by missing approved phone mapping.
 - [x] SEO metadata, schema, robots, sitemap and canonicals implemented without held facts.
-- [ ] Canonical domain, DNS, TLS and Vercel production held by missing project/access mapping.
-- [ ] Anonymous production read-back held until deployment.
+- [ ] Canonical domain DNS/TLS held by the third-party parked DNS records; Vercel production is deployed.
+- [x] Anonymous Vercel production read-back passes; canonical-domain read-back remains held by DNS.
 - [ ] Command Center registry update held by missing owner-approved StoreCode.
 
 ## Placeholder manifest
@@ -65,6 +65,6 @@
 ## Final state
 
 - State: `PROPOSED`
-- Required holds: StoreCode, main/delivery phone, public hours, exact menu feed, SOD POD, Master Lines/Telnyx assignments, GitHub/Vercel target, DNS access.
+- Required holds: StoreCode, main/delivery phone, public hours, exact menu feed, SOD POD, Master Lines/Telnyx assignments, and DNS access.
 - Conditional holds: analytics/GTM/GSC and redirect domains.
-- Owner next action: provide or confirm the operational fields above so the prepared build can be onboarded, deployed and live-verified.
+- Owner next action: update Namecheap DNS (`@` to Vercel A records and `www` to the Vercel CNAME recorded in the launch report), then provide or confirm the remaining operational fields.
