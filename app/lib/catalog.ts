@@ -29,7 +29,23 @@ const CATEGORY_NAMES: Record<string, string> = {
   "VAPE DISPOSABLE": "Disposable Vapes",
   "VAPE PENS": "Vape Pens"
 };
-export const PRODUCTS = SNAPSHOT.products.map((product) => ({ ...product, category: CATEGORY_NAMES[product.category] ?? product.category }));
+const SIX_GRAM_TIERS = new Set(["Exotic", "Premium", "AAA+"]);
+
+export function customerVariantLabel(category: string, label: string) {
+  return SIX_GRAM_TIERS.has(category) && label === "5g" ? "6g" : label;
+}
+
+export const PRODUCTS = SNAPSHOT.products.map((product) => {
+  const category = CATEGORY_NAMES[product.category] ?? product.category;
+  return {
+    ...product,
+    category,
+    variants: product.variants?.map((variant) => ({
+      ...variant,
+      label: customerVariantLabel(category, variant.label)
+    }))
+  };
+});
 export const FLOWERS = PRODUCTS.filter((product) => product.kind === "flower");
 export const ITEMS = PRODUCTS.filter((product) => product.kind === "item");
 
