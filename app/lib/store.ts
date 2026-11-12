@@ -29,7 +29,6 @@ export const NAV = [
   { href: "/menu/easy", label: "Easy View" },
   { href: "/delivery", label: "Delivery" },
   { href: "/visit", label: "Visit" },
-  { href: "/contact", label: "Contact" },
-  { href: "/cannabis-dispensary-amesbury", label: "Amesbury Guide" },
+  { href: "/resources", label: "Guides" },
   { href: "/faq", label: "FAQ" }
 ] as const;
