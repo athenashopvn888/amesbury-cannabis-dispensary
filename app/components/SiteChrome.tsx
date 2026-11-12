@@ -18,7 +18,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer>
-      <div><Image src="/brand/amesbury-wordmark.svg" alt="Amesbury Cannabis Dispensary" width={360} height={92} /><p>{STORE.address}</p><a href={STORE.maps}>Open Google Maps</a></div>
+      <div><Image src="/brand/amesbury-wordmark.svg" alt="Amesbury Cannabis Dispensary" width={360} height={92} style={{ width: "100%", height: "auto" }} /><p>{STORE.address}</p><a href={STORE.maps}>Open Google Maps</a></div>
       <div><h2>Explore</h2>{NAV.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
       <div><h2>Visit</h2><p><a href={`tel:${STORE.phoneTel}`}>{STORE.phone}</a></p><p>{STORE.hoursStatus}.</p><Link href="/policies">Website policies</Link></div>
       <small>For adults 19+. Bring valid government-issued photo identification.</small>
