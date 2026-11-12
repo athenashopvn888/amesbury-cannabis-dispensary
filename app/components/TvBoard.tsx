@@ -52,7 +52,7 @@ function Panel({ panel, mode }: { panel: BoardPanel; mode: BoardMode }) {
     <div className="tvPanelBody">
       <div className="tvFeature">
         <div className="tvFeatureImage">
-          {featured?.image ? <Image src={featured.image} alt={`${featured.name} product`} fill sizes="180px" unoptimized /> : <Image src="/brand/amesbury-mark.svg" alt="Amesbury Cannabis Dispensary" fill sizes="180px" />}
+          {featured?.image ? <Image src={featured.image} alt={`${featured.name} product`} fill sizes="180px" loading="eager" unoptimized /> : <Image src="/brand/amesbury-mark.svg" alt="Amesbury Cannabis Dispensary" fill sizes="180px" loading="eager" />}
         </div>
         {featured && <div><b>{featured.name}</b><small>{featured.thc ? `${featured.thc} THC · ` : ""}{mode === "flower" ? flowerPrice(featured) : itemPrice(featured)}</small></div>}
       </div>
