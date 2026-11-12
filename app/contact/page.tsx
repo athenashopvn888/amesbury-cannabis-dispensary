@@ -1,0 +1,5 @@
+import Link from "next/link";
+import SiteChrome from "../components/SiteChrome";
+import { STORE } from "../lib/store";
+export const metadata = { title: "Contact Amesbury Cannabis Dispensary", description: "Call Amesbury Cannabis Dispensary or get directions to 1575 Lawrence Ave W in North York." };
+export default function ContactPage() { return <SiteChrome><main><section className="pageHero"><p className="kicker">CONTACT AMESBURY</p><h1>Call, visit or order online.</h1><p>The main store number handles general questions. Delivery orders begin in the secure online order chat.</p></section><section className="visitGrid contactCards"><article><span>PHONE</span><h2>{STORE.phone}</h2><a className="primaryLink" href={`tel:${STORE.phoneTel}`}>Call the store</a></article><article><span>ADDRESS</span><h2>{STORE.street}</h2><a className="primaryLink" href={STORE.maps}>Open directions</a></article><article><span>DELIVERY</span><h2>Order chat</h2><Link className="primaryLink" href="/delivery#order-chat">Start an order</Link></article></section></main></SiteChrome>; }

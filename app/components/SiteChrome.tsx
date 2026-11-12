@@ -20,7 +20,7 @@ export function Footer() {
     <footer>
       <div><Image src="/brand/amesbury-wordmark.svg" alt="Amesbury Cannabis Dispensary" width={360} height={92} /><p>{STORE.address}</p><a href={STORE.maps}>Open Google Maps</a></div>
       <div><h2>Explore</h2>{NAV.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
-      <div><h2>Store status</h2><p>{STORE.hoursStatus}.</p><p>{STORE.menuStatus}.</p><Link href="/policies">Website policies</Link></div>
+      <div><h2>Visit</h2><p><a href={`tel:${STORE.phoneTel}`}>{STORE.phone}</a></p><p>{STORE.hoursStatus}.</p><Link href="/policies">Website policies</Link></div>
       <small>For adults 19+. Bring valid government-issued photo identification.</small>
     </footer>
   );

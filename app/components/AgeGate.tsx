@@ -1,15 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const KEY = "amesbury-age-confirmed";
 
 export default function AgeGate() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   useEffect(() => {
-    const frame = requestAnimationFrame(() => setOpen(sessionStorage.getItem(KEY) !== "yes"));
+    const frame = requestAnimationFrame(() => setOpen(!["/tv", "/tv2"].includes(pathname) && sessionStorage.getItem(KEY) !== "yes"));
     return () => cancelAnimationFrame(frame);
-  }, []);
+  }, [pathname]);
   if (!open) return null;
   return (
     <div className="ageGate" role="dialog" aria-modal="true" aria-labelledby="age-title">

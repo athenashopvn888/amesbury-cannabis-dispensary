@@ -1,49 +1,49 @@
 # Amesbury Cannabis Dispensary launch report
 
 Date: 2026-11-12 (Asia/Bangkok)  
-State: `DEPLOYED`
+State: `RELEASE CANDIDATE`
 
 ## DONE
 
 - Created a distinct emerald/gold responsive website using ADC only as a route and behavior reference.
-- Added home, menu, five flower collection routes, delivery status, visit, Amesbury local guide, FAQ, policy, TV and TV2 surfaces.
+- Added home, full menu, category-first Easy View, delivery menu, five flower collections, 156 product pages, 9 item-category pages, visit, local guide, FAQ, policy, TV and TV2 surfaces.
 - Added exact owner-supplied business name, address, domain and Google Maps link.
-- Created two original botanical campaign banners, a wordmark, monogram, Open Graph card and stored the supplied storefront image.
+- Created original botanical campaign artwork, eight ACD-labelled promotional panels, a wordmark, monogram, Open Graph card and stored the supplied storefront image.
 - Added age gate, keyboard/focus-friendly semantic navigation, reduced-motion handling and 390px responsive layouts.
-- Added centralized store data, metadata, LocalBusiness/Store and FAQ schema without phone/hours guesses, robots and sitemap.
-- Menu, delivery, TV and collection pages fail closed until exact governed sources are approved.
-- Contract tests prohibit copied ADC identity, invented phone, hours, delivery promises and inventory claims.
+- Added the GDC main line exactly as directed, with no separate delivery number.
+- Loaded the owner-provided PNY central count into one shared catalogue: 156 products, including 52 flower SKUs and 104 non-flower items.
+- Added centralized store data, route-specific metadata, Store/Product/FAQ schema, robots and a sitemap covering product and category routes.
+- Prepared the fleet SOD chat integration behind a unique StoreCode setting; it fails closed until Amesbury receives a non-conflicting code.
+- Contract tests prohibit copied ADC identity, invented hours, delivery promises and internal operational wording.
 
 ## BLOCKED
 
 - StoreCode: missing owner-approved value. `ACD01` is already assigned elsewhere and was not reused.
-- Menu/on-hand: exact Amesbury feed/store code and current inventory authority missing.
-- Phone/hours: no owner-approved main phone, delivery phone or GBP-derived hours supplied.
-- SOD/POD, Master Lines and Telnyx: dependent on the missing StoreCode and phone assignments.
-- Canonical DNS/TLS: Vercel owns and verified the domain assignment, but Namecheap still serves parked records. Required registrar changes: replace apex parking with Vercel `A @ 216.198.79.1` and `A @ 64.29.17.1`; replace the `www` parking CNAME with `CNAME www 7f83bdeb5667a557.vercel-dns-017.com`.
-- Canonical-domain production verification: blocked until those DNS records propagate.
+- Public hours: GBP is not available yet, so no hours were invented.
+- SOD/POD: the integration is ready, but Amesbury needs an owner-approved unique StoreCode; `ACD01` remains assigned to Agincourt and was not reused.
+- Master Lines and Telnyx: no Amesbury routing assignment was supplied.
 
 ## Route matrix
 
 | Capability | Route | State |
 |---|---|---|
 | Home/local identity | `/` | DONE |
-| Full menu shell | `/menu` | DONE, feed held |
-| Five collection pages | `/menu/[tier]` | DONE, listings held |
-| Delivery | `/delivery` | DONE, workflow held |
+| Full menu | `/menu` | DONE, 156 products |
+| Mobile Easy View | `/menu/easy` | DONE, category-first |
+| Five collection pages | `/menu/[tier]` | DONE |
+| Delivery | `/delivery` | DONE, SOD activation held by StoreCode |
 | Visit/directions | `/visit` | DONE |
 | Local guide | `/cannabis-dispensary-amesbury` | DONE |
 | FAQ/policies | `/faq`, `/policies` | DONE |
-| TV boards | `/tv`, `/tv2` | DONE, feed held |
-| Product detail/category live data | — | BLOCKED by feed |
-| Analytics and Search Console | — | BLOCKED by IDs/access |
+| TV boards | `/tv`, `/tv2` | DONE |
+| Product detail/category pages | `/products/[sku]`, `/items/[category]` | DONE |
+| Search Console | domain property + `/sitemap.xml` | IN PROGRESS |
 
 ## Release evidence
 
 - Repository: `https://github.com/athenashopvn888/amesbury-cannabis-dispensary`.
-- Branch: `codex/amesbury-new-location-20261112`; implementation commit `2a186b1`; PR `#1`.
+- Release branch: `codex/amesbury-full-launch-20261112`.
 - Vercel project: `trungndesign99s-projects/amesbury-cannabis-dispensary`.
-- Production deployment: `dpl_HLs496D8Xq4CKEHDms3NV6GpmeoU`; READY at `https://amesbury-cannabis-dispensary.vercel.app`.
-- Canonical domain: `amesburycannabisdispensary.com` is attached and ownership-verified in Vercel, but DNS still points to Namecheap parking and is not live.
-- QA: six contract tests pass; lint passes; Next.js 16.4.6 production build passes; production dependency audit reports zero vulnerabilities; 1440×900 and 390×844 browser checks show no horizontal overflow or console errors.
+- Canonical domain: `amesburycannabisdispensary.com` is attached to Vercel and the Namecheap apex/www records have been replaced with Vercel records.
+- QA: seven contract tests pass; lint passes; Next.js 16.4.6 production build generates 187 routes; production dependency audit reports zero vulnerabilities; browser checks cover home, Easy View, delivery and full-screen TV behavior.
 - Remaining placeholders: none in declared visual slots. Operational surfaces use explicit unavailable states, not visual placeholders.

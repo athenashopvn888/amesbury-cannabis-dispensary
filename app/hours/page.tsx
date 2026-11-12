@@ -1,0 +1,4 @@
+import SiteChrome from "../components/SiteChrome";
+import { STORE } from "../lib/store";
+export const metadata = { title: "Store Hours", description: "Check current public hours and directions for Amesbury Cannabis Dispensary at 1575 Lawrence Ave W." };
+export default function HoursPage() { return <SiteChrome><main><section className="pageHero local"><p className="kicker">STORE HOURS</p><h1>Check today&apos;s hours before you visit.</h1><p>Public hours can change. Google Maps is the current source for today&apos;s opening information.</p><div className="actions"><a href={STORE.maps}>View current hours</a><a className="outline" href={`tel:${STORE.phoneTel}`}>Call {STORE.phone}</a></div></section><section className="plainContent prose"><h2>Visit 1575 Lawrence Avenue West</h2><p>{STORE.name} is at {STORE.address}. Use the map listing for routing, traffic and the latest public hours.</p></section></main></SiteChrome>; }
