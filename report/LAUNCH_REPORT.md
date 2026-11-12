@@ -51,3 +51,14 @@ State: `LIVE WITH SOD HOLD`
 - Google Search Console: ownership verified using the live HTML file; `/sitemap.xml` submitted with `Success` and 181 discovered pages on 2026-11-12.
 - QA: seven contract tests pass; lint passes; Next.js 16.4.6 production build generates 187 routes; production dependency audit reports zero vulnerabilities; browser checks cover home, Easy View, delivery and full-screen TV behavior.
 - Remaining placeholders: none in declared visual slots. Operational surfaces use explicit unavailable states, not visual placeholders.
+
+## Mobile calibration repair — 2026-11-12
+
+- Replaced the clipped mobile category chip rail with one full-width category selector above search.
+- Rebuilt menu cards around a fixed product-media frame using `object-fit: contain`; verified Lavender Kush and other portrait product artwork renders fully without cropping.
+- Reduced the mobile hero from 760px to 590px and tightened its type, copy and actions.
+- Reflowed the four store facts into a compact 2×2 mobile block.
+- Kept all eight ACD campaign panels but moved them into one compact horizontal swipe rail instead of eight large stacked homepage sections.
+- Removed the duplicate flower-tier block from the homepage; tier pages remain available from the menu and campaign links.
+- Corrected the empty SKU 1010 customer label to `PLAYERFARE` from the owner-provided count sheet.
+- Added a mobile regression test. At 390×844: no horizontal overflow, full product image containment, full-width category control and compact cards verified.
